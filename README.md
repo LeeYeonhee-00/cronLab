@@ -16,7 +16,7 @@
 
 ## 실습 개요 :star:
 
-- target log file : 프로젝트에서 작성된 log.txt 파일
+- target file : (가정)프로젝트에서 작성된 log.txt 파일
 - 스케줄 : 5분 마다 log 파일 백업
 - 경로 지정 : 01.log/log.txt -> 02.backup
 
