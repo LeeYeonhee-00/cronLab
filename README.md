@@ -91,3 +91,23 @@ echo "디렉토리 생성 완료"
 
 ### 적용 후 백업된 구조
 ![image](https://github.com/user-attachments/assets/b6237eed-69a5-413e-8c92-1b51e756fce4)
+
+
+### 리펙토링💻
+백업 대상 폴더를 압축하여 백업하는 과정을 Shell Script로 진행하는 코드
+```
+#!/bin/bash
+
+backup_dir="/home/username/back"
+
+backup_file="backup_$(date +"%Y%m%d_%H%M%S").tar.gz"
+
+tar -czf "$backup_dir/$backup_file" -C /home/username/step02shell .
+
+if [ -f "$backup_dir/$backup_file" ]; then
+    echo "backup 성공"
+else
+    echo "backup 실패"
+    exit 1
+fi
+```
